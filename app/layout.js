@@ -14,7 +14,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${inter.className} bg-[#B6EBFA] min-h-screen flex flex-col justify-between`}
+        className={`${inter.className} bg-[#B6EBFA] min-h-screen flex flex-col justify-between mx-auto w-[1100px] p-4` }
       >
         <div>
           <Image
@@ -26,7 +26,7 @@ export default function RootLayout({ children }) {
           <Navbar />
         </div>
         {children}
-        <div className="text-center">© Copyright 2011-21 RRC NR</div>
+        <div className="text-center p-8">© Copyright 2011-21 RRC NR</div>
       </body>
     </html>
   );

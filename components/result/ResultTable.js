@@ -3,20 +3,41 @@ import React from "react";
 const ResultTable = ({ result }) => {
   return (
     <div className="mt-6">
-      <p className="font-bold text-lg text-center mb-4">
-        Candidate Information
-      </p>
-      <table className="w-full text-left">
-        <tbody>
+      <table className="w-full border-collapse">
+        <thead>
           <tr>
-            <td className="border p-2 font-semibold">Name:</td>
+            <th className="text-left  p-2 border border-black font-serif">Name</th>
+            <th className="text-left  p-2 border border-black  font-serif">Date Of birth</th>
+            <th className="text-left  p-2 border border-black  font-serif">Registration Number</th>
+            <th className="text-left  p-2 border border-black font-serif">Community</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr className='font-serif font-semibold'>
+            <td className="text-left p-2 border border-black">{result.candidateName}</td>
+            <td className="text-left p-2 border border-black"> {result.dob}</td>
+            <td className="text-left p-2 border border-black"> {result.registerNumber}</td>
+            <td className=" text-left p-2 border border-black " >{result.community}</td>
+          </tr>
+          {/* Add more rows as needed */}
+        </tbody>
+      </table>
+      <span
+        className={
+          result.status === "Pass" ? "text-green-500 mt-9 font-bold text-lg" : "text-red-500 mt-11"
+        }
+      >
+        {result.status}
+      </span>
+
+      {/* <table className="w-full text-left border-collapse shadow-lg">
+        <tbody>
+          <tr className="bg-gray-100">
+            <td className="border p-2 font-semibold w-1/3">Name:</td>
             <td className="border p-2">{result.candidateName}</td>
           </tr>
-          <tr>
-            <td className="border p-2 font-semibold">Father's Name:</td>
-            <td className="border p-2">{result.fatherName}</td>
-          </tr>
-          <tr>
+
+          <tr className="bg-gray-100">
             <td className="border p-2 font-semibold">Roll Number:</td>
             <td className="border p-2">{result.rollNumber}</td>
           </tr>
@@ -24,7 +45,7 @@ const ResultTable = ({ result }) => {
             <td className="border p-2 font-semibold">Register Number:</td>
             <td className="border p-2">{result.registerNumber}</td>
           </tr>
-          <tr>
+          <tr className="bg-gray-100">
             <td className="border p-2 font-semibold">Date of Birth:</td>
             <td className="border p-2">{result.dob}</td>
           </tr>
@@ -32,7 +53,7 @@ const ResultTable = ({ result }) => {
             <td className="border p-2 font-semibold">Community:</td>
             <td className="border p-2">{result.community}</td>
           </tr>
-          <tr>
+          <tr className="bg-gray-100">
             <td className="border p-2 font-semibold">Status:</td>
             <td className="border p-2 font-bold">
               <span
@@ -45,7 +66,7 @@ const ResultTable = ({ result }) => {
             </td>
           </tr>
         </tbody>
-      </table>
+      </table> */}
     </div>
   );
 };

@@ -17,7 +17,7 @@ export default function StatusCheck() {
       </h2>
       {error && <p className="text-red-600 mt-4">{error}</p>}
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-4xl w-fit mx-auto md:w-full mb-4">
+      <div className="grid grid-cols-1 gap-4 max-w-md mx-auto mb-4">
         <Form setError={setError} setResult={setResult} />
         {result && <ResultTable result={result} />}
       </div>
