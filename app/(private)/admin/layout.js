@@ -9,6 +9,9 @@ export default function layout({ children }) {
           Admin panel
         </Link>
         <div className="flex space-x-4 items-center">
+          <Link href={`/admin/create-notice`} className="hover:underline">
+            Create Notice
+          </Link>
           <Link href={`/admin/create-candidate`} className="hover:underline">
             Create Candidate
           </Link>

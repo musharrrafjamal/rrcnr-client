@@ -7,6 +7,7 @@ const CandidateSchema = new mongoose.Schema(
     rollNumber: { type: String, unique: true, required: true },
     registerNumber: { type: String, unique: true, required: true },
     dob: { type: String, required: true },
+    trade: { type: String, required: true },
     community: { type: String, required: true },
     status: { type: String, enum: ["Pass", "Fail"], required: true },
   },
