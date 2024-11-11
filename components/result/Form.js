@@ -46,14 +46,16 @@ const Form = ({ setResult, setError }) => {
           }}
         >
           <option value="">Select</option>
-          <option value="registerNumber">Register Number</option>
+          <option value="registerNumber">Registration Number</option>
           <option value="rollNumber">Roll Number</option>
         </select>
       </div>
 
       {searchBy === "registerNumber" && (
         <div className="text-left">
-          <label className="block font-semibold mb-1">Register Number</label>
+          <label className="block font-semibold mb-1">
+            Registration Number
+          </label>
           <input
             type="text"
             name="registerNumber"

@@ -6,29 +6,48 @@ const ResultTable = ({ result }) => {
       <table className="w-full border-collapse">
         <thead>
           <tr>
-            <th className="text-left  p-2 border border-black font-serif">Name</th>
-            <th className="text-left  p-2 border border-black  font-serif">Date Of birth</th>
-            <th className="text-left  p-2 border border-black  font-serif">Registration Number</th>
-            <th className="text-left  p-2 border border-black font-serif">Community</th>
+            <th className="text-left  p-2 border border-black font-serif">
+              Name
+            </th>
+            <th className="text-left  p-2 border border-black  font-serif">
+              Date Of birth
+            </th>
+            <th className="text-left  p-2 border border-black  font-serif">
+              Registration Number
+            </th>
+            <th className="text-left  p-2 border border-black font-serif">
+              Community
+            </th>
           </tr>
         </thead>
         <tbody>
-          <tr className='font-serif font-semibold'>
-            <td className="text-left p-2 border border-black">{result.candidateName}</td>
+          <tr className="font-serif font-semibold">
+            <td className="text-left p-2 border border-black">
+              {result.candidateName}
+            </td>
             <td className="text-left p-2 border border-black"> {result.dob}</td>
-            <td className="text-left p-2 border border-black"> {result.registerNumber}</td>
-            <td className=" text-left p-2 border border-black " >{result.community}</td>
+            <td className="text-left p-2 border border-black">
+              {" "}
+              {result.registerNumber}
+            </td>
+            <td className=" text-left p-2 border border-black ">
+              {result.community}
+            </td>
           </tr>
           {/* Add more rows as needed */}
         </tbody>
       </table>
-      <span
+      <div
         className={
-          result.status === "Pass" ? "text-green-500 mt-9 font-bold text-lg" : "text-red-500 mt-11"
+          result.status === "Pass"
+            ? "text-green-500 mt-4 font-bold text-xl"
+            : "text-red-500 mt-10"
         }
       >
-        {result.status}
-      </span>
+        {result.status === "Pass"
+          ? "You are short list for documents verification"
+          : "You are not short list for documents verification"}
+      </div>
 
       {/* <table className="w-full text-left border-collapse shadow-lg">
         <tbody>
